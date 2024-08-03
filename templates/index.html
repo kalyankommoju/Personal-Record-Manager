@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"/>
+</head>
+<body class="home_body">
+    <div class="home_div">
+        <h1 class="home_h1">Personal Record Manager</h1>
+        <button class="home_button1"><a href="{{url_for('register')}}">Register</a></button>
+        <button class="home_button2"><a href="{{url_for('login')}}">Login</a></button><br/><br/>
+        <label class="home_label">About</label>
+        <h5 class="home_h5">You write anything you want and also you can update, delete and save your text</h5>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add notes</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"/>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <p class="flash">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <div class="reg_div">
+        <h1 class="reg_h1">Add notes</h1>
+        <form method="POST" class="reg_form">
+            <label class="reg_label">Title</label>
+            <input type="text" name="title" class="home_input" placeholder="Create title" required/>
+            <label class="reg_label">Content</label>
+            <textarea name="content" class="textarea" placeholder="Write your content" required></textarea>
+            <button class="reg_button">submit</button>
+        </form>
+    </div>
+</body>
+</html>

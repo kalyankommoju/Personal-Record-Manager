@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploadfile</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"/>
+</head>
+<body>
+    <div class="reg_div">
+        <h1 class="reg_h1" style="padding-bottom:3% ;">Upload your file here</h1>
+        <form class="reg_form" method="POST" enctype="multipart/form-data">
+            <input type="file" class="home_input" id="file"  name="file" />
+            <button class="reg_button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view notes</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"/>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <p class="flash">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+  
+    <div class="reg_div">
+        <h1 class="reg_h1">view notes</h1>
+        <div class="reg_form">
+            {% for i in view %}
+            <label class="reg_label">Title</label>
+            <input type="text" name="title" class="home_input"  value="{{i[0]}}" readonly/>
+            <label class="reg_label">Content</label>
+            <textarea name="content" class="textarea" readonly>{{i[1]}}</textarea>
+            <a href="{{url_for('allnotes')}}" class="reg_button" type="button">Back</a>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
